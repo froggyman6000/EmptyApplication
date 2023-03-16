@@ -3,6 +3,7 @@ package lt.justinas.emptyapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.delay
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val myTextView: TextView = findViewById(R.id.myTextView)
+        val openButton: Button = findViewById(R.id.buttonOpen)
         Log.i("myTag", "onCreate: ${myTextView.text}")
 
         lifecycleScope.launch{
