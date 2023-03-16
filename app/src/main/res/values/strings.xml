@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Empty Application</string>
+    <string name="sayHello">Hi there!</string>
+    <string name="secondMessage">Changed text</string>
+</resources>
