@@ -16,23 +16,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val TAG = "myMessages"
         val myTextView: TextView = findViewById(R.id.myTextView)
         val openButton: Button = findViewById(R.id.buttonOpen)
-        Log.i("myTag", "onCreate: ${myTextView.text}")
+        Log.i(TAG, "onCreate: ${myTextView.text}")
         openButton.isVisible = false // instead of this we can use openButton.visibility = View.INVISIBLE
 
         lifecycleScope.launch{
             myTextView.text = getString(R.string.sayHello)
-            Log.i("myTag", "onCreate: Changed text to ${myTextView.text}")
+            Log.i(TAG, "onCreate: Changed text to ${myTextView.text}")
 
             delay(5000)
 
             myTextView.text = getString(R.string.secondMessage)
             openButton.isVisible = true
-            Log.i("myTag", "onCreate: Waited 5 seconds and changed text to ${myTextView.text}, also made the button visible")
+            Log.i(TAG, "onCreate: Waited 5 seconds and changed text to ${myTextView.text}, also made the button visible")
 
         }
 
+        openButton.setOnClickListener {
+            Log.i(TAG, "onCreate: openButton was clicked")
+        }
     }
 
 }
