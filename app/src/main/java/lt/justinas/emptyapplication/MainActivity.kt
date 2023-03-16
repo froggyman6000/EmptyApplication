@@ -1,5 +1,6 @@
 package lt.justinas.emptyapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -36,6 +37,8 @@ class MainActivity : AppCompatActivity() {
 
         openButton.setOnClickListener {
             Log.i(TAG, "onCreate: openButton was clicked")
+            val openIntent: Intent = Intent(this, SecondActivity::class.java)
+            startActivity(openIntent)
         }
     }
 
