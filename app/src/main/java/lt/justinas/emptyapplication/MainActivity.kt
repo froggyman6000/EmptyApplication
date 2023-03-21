@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val TAG = "myMessages"
         val myTextView: TextView = findViewById(R.id.myTextView)
         val openButton: Button = findViewById(R.id.buttonOpen)
+        val mainEditText: EditText = findViewById(R.id.mainEditText)
         Log.i(TAG, "onCreate: ${myTextView.text}")
         openButton.isVisible = false // instead of this we can use openButton.visibility = View.INVISIBLE
 
