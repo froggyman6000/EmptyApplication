@@ -3,6 +3,6 @@
     <string name="sayHello">Hi there!</string>
     <string name="secondMessage">Changed text</string>
     <string name="MainActivity_buttonOpen">Open</string>
-    <string name="secondActivityText">Second Activity Text</string>
+    <string name="secondActivityText">Your text is: </string>
     <string name="secondButtonText">Close</string>
 </resources>

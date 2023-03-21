@@ -12,13 +12,12 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
+const val TAG = "myMessages"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val TAG = "myMessages"
         val myTextView: TextView = findViewById(R.id.myTextView)
         val openButton: Button = findViewById(R.id.buttonOpen)
         val mainEditText: EditText = findViewById(R.id.mainEditText)
@@ -38,8 +37,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         openButton.setOnClickListener {
+            val message = mainEditText.text.toString()
             Log.i(TAG, "onCreate: openButton was clicked")
-            val openIntent: Intent = Intent(this, SecondActivity::class.java)
+            val openIntent = Intent(this, SecondActivity::class.java)
+            openIntent.putExtra("message_key", message)
             startActivity(openIntent)
         }
     }
