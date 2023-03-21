@@ -16,5 +16,9 @@ class SecondActivity : AppCompatActivity() {
         secondTextView.text = getString(R.string.secondActivityText)
         secondButton.text = getString(R.string.secondButtonText)
 
+        secondButton.setOnClickListener {
+            finish()
+        }
+
     }
 }

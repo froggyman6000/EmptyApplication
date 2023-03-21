@@ -4,5 +4,5 @@
     <string name="secondMessage">Changed text</string>
     <string name="MainActivity_buttonOpen">Open</string>
     <string name="secondActivityText">Second Activity Text</string>
-    <string name="secondButtonText">Button no. 2</string>
+    <string name="secondButtonText">Close</string>
 </resources>
