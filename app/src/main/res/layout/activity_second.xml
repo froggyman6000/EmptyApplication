@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:text="Second Button"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/secondTextView"
         app:layout_constraintStart_toStartOf="@+id/secondTextView"
         app:layout_constraintTop_toBottomOf="@+id/secondTextView"/>
